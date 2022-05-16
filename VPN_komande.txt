@@ -1,0 +1,12 @@
+SERVER
+/interface pptp-server server set enabled=yes
+/interface pptp-server server print
+
+/ppp secret add name=KOR_IME service=pptp password=LOZINKA local-address=192.168.200.1 remote-address=192.168.200.2
+/ppp secret print
+
+/interface pptp-server add name=NAZIV_SUCELJA user=KOR_IME
+
+KLIJENT
+/interface pptp-client add user=KOR_IME password=LOZINKA connect-to=IP_ADRESA disabled=no
+
