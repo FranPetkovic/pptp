@@ -10,3 +10,10 @@ SERVER
 KLIJENT
 /interface pptp-client add user=KOR_IME password=LOZINKA connect-to=IP_ADRESA disabled=no
 
+DHCP
+ip pool
+add name = lokalna ranges=XY-ZA
+ip dhcp-server network
+add address=A/MM dns-server=B gateway=C
+ip dhcp-server
+add address-pool=lokalna disabled=no interface=SUCELJE lease-time=8:00:00 name=NAZIV 
